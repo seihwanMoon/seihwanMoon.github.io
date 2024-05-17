@@ -1,10 +1,16 @@
 ---
 layout: single
 title:  "OpenAI API 키 발급 및 설정"
-categories: coding
-tag: [python, blog, jekyll]
+categories: langchain
+tag: [python, blog, langchain]
 toc: true
+toc_sticky: true
+toc_label: "목차"
+toc_icon: "fas fa-utensils"
 author_profile: false
+use_math: true
+sidebar:
+ nav: "counts"
 ---
 
 <head>
@@ -27,16 +33,16 @@ author_profile: false
       font-weight: bold;
       padding: 8px;
     }
-
+    
     table.dataframe td {
       text-align: center;
       padding: 8px;
     }
-
+    
     table.dataframe tr:hover {
       background: #b8d1f3; 
     }
-
+    
     .output_prompt {
       overflow: auto;
       font-size: 0.9rem;
@@ -76,43 +82,26 @@ author_profile: false
   }
 
   </style>
-</head>
 
+</head>
 
 ## OpenAI API 키 발급 및 설정
 
-
-
 1. OpenAI API 키 발급
-
-
-
 - [OpenAI API 키 발급방법](https://teddylee777.github.io/openai/openai-api-key/) 글을 참고해 주세요.
-
-
-
 2. `.env` 파일 설정
-
-
-
 - 프로젝트 루트 디렉토리에 `.env` 파일을 생성합니다.
 
 - 파일에 API 키를 다음 형식으로 저장합니다:
-
+  
   `OPENAI_API_KEY` 에 발급받은 API KEY 를 입력합니다.
 
-
-
 - `.env` 파일에 발급한 API KEY 를 입력합니다.
-
-
-
 
 ```python
 # LangChain 업데이트
 # !pip install -U langchain langchain-community langchain-experimental langchain-core langchain-openai langsmith
 ```
-
 
 ```python
 # API KEY를 환경변수로 관리하기 위한 설정 파일
@@ -126,10 +115,8 @@ load_dotenv()
 <pre>
 True
 </pre>
+
 API Key 가 잘 설정되었는지 확인합니다.
-
-
-
 
 ```python
 import os
