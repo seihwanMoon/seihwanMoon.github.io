@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "jupyter notebook 변환하기!"
+title:  "OpenAI API 키 발급 및 설정"
 categories: coding
 tag: [python, blog, jekyll]
 toc: true
