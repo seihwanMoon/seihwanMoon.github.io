@@ -1,4 +1,4 @@
-출처: https://python.langchain.com/v0.2/docs/
+출처: https://python.langchain.com/v0.2/docs/introduction/
 
 LCEL로 간단한 LLM 애플리케이션 구축
 - [언어 모델](https://python.langchain.com/v0.2/docs/concepts/#chat-models) 사용

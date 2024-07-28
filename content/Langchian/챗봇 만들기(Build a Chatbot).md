@@ -1,6 +1,6 @@
 
 
-출처: https://python.langchain.com/v0.2/docs/
+출처: https://python.langchain.com/v0.2/docs/introduction/
 
 ### Overview[​](https://python.langchain.com/v0.2/docs/tutorials/llm_chain/#overview "Direct link to Overview")
 
