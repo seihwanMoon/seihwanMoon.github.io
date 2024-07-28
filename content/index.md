@@ -1,7 +1,7 @@
 ---
-title: Welcome to Quartz 4
+title: Moon's 디지털가든 입니다
 ---
 
-Quartz is a fast, batteries-included static-site generator that transforms Markdown content into fully functional websites. Thousands of students, developers, and teachers publish personal notes, wikis, and [digital gardens](https://jzhao.xyz/posts/networked-thought) to the web.
+Obsidian 을 이용한 제2의 뇌를 만들어 가는 블로그 입니다.
 
-See the [official documentation](https://quartz.jzhao.xyz/) for more details.
+
