@@ -1,4 +1,4 @@
-출처: https://python.langchain.com/v0.2/docs/introduction/
+출처: (Build a Simple LLM Application with LCEL) https://python.langchain.com/v0.2/docs/introduction/
 
 LCEL로 간단한 LLM 애플리케이션 구축
 - [언어 모델](https://python.langchain.com/v0.2/docs/concepts/#chat-models) 사용
@@ -242,6 +242,3 @@ LangChain의 핵심 개념에 대한 자세한 내용을 보려면 자세한 [�
 - [출력 파서](https://python.langchain.com/v0.2/docs/how_to/#output-parsers)
 - [랭서브](https://python.langchain.com/v0.2/docs/langserve/)
 
-그리고 LangSmith 문서:
-- [랭스미스](https://docs.smith.langchain.com/)
- 
