@@ -18,6 +18,7 @@ concurrency:
 
 jobs:
   linkcheck:
+    if: github.ref != 'seihwanMoon.github.io' # 특정 브랜치에서는 실행되지 않도록 설정
     runs-on: ubuntu-latest
     env:
       DIR: 'content'
@@ -45,4 +46,3 @@ jobs:
         with:
           path: .lycheecache
           key: ${{ steps.restore-cache.outputs.cache-primary-key }}
-
