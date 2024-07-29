@@ -215,7 +215,7 @@ if __name__ == "__main__":
 ```
 python serve.py
 ```
-우리 체인은 [http://localhost:8000](http://localhost:8000/)에서 제공되는 것을 봐야 합니다.
+우리 체인은 "http://localhost:8000" 에서 제공되는 것을 봐야 합니다.
 
 ### Playground
 
