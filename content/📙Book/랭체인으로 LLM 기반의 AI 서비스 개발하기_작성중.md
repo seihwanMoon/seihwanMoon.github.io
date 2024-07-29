@@ -1,4 +1,9 @@
-#langchain 
+---
+tags:
+  - 📚Book
+  - langchain
+---
+
 지은이: 서지영
 출판사: [길벗·이지톡](https://www.gilbut.co.kr/)
 
@@ -79,13 +84,12 @@ __6.5 문장 생성, M365 코파일럿
 
 부록 코랩 사용법
 __A.1 코랩 사용 방법
-__A.2 코랩에 파일 업로드하기
 
 ## 4장 
 
 ### 모델_I_O_(Model_I_O)
 
-- PromptTemplate 을 활용하여 프롬프트를 생성: LLM에게 어떤 문장을 만들지 알는는 역할할
+- PromptTemplate 을 활용하여 프롬프트를 생성: LLM에게 어떤 문장을 만들지 알리는 역할
 ```python fold title:"예제코드"
 from langchain_core.prompts import PromptTemplate
 template = "{topic}를 홍보하기 위한 좋은 문구를 추천해줘?"
