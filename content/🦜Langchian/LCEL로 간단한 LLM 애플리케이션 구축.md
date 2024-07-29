@@ -215,11 +215,11 @@ if __name__ == "__main__":
 ```
 python serve.py
 ```
-우리 체인은 "http://localhost:8000" 에서 제공되는 것을 봐야 합니다.
+우리 체인은 `http://localhost:8000` 에서 제공되는 것을 봐야 합니다.
 
 ### Playground
 
-모든 LangServe 서비스에는 스트리밍 출력과 중간 단계로의 가시성을 갖춘 애플리케이션을 구성하고 호출할 수 있는 간단한 [내장](https://github.com/langchain-ai/langserve/blob/main/README.md#playground) UI가 제공됩니다. [http://localhost:8000/chain/playground/](http://localhost:8000/chain/playground/)로 이동하여 사용해 보십시오! 이전과 동일한 입력을 전달합니다. `{"language": "italian", "text": "hi"}` - 그리고 이전과 동일하게 응답해야 합니다.
+모든 LangServe 서비스에는 스트리밍 출력과 중간 단계로의 가시성을 갖춘 애플리케이션을 구성하고 호출할 수 있는 간단한 [내장](https://github.com/langchain-ai/langserve/blob/main/README.md#playground) UI가 제공됩니다. 로 이동하여 사용해 보십시오! 이전과 동일한 입력을 전달합니다. `{"language": "italian", "text": "hi"}` - 그리고 이전과 동일하게 응답해야 합니다.
 
 #### Client
 
