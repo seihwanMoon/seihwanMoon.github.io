@@ -23,10 +23,10 @@ jobs:
       DIR: 'content'
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
       - name: Restore lychee cache
         id: restore-cache
-        uses: actions/cache/restore@v4
+        uses: actions/cache@v3
         with:
           path: .lycheecache
           key: cache-lychee-${{ github.sha }}
@@ -35,13 +35,14 @@ jobs:
         uses: lycheeverse/lychee-action@v1.10.0
         id: lychee
         with:
-          fail: true
+          fail-on-error: true
           args: '--accept 200,204,429 --verbose --no-progress --cache --max-cache-age 1d ${{ env.DIR }}'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Save lychee cache
-        uses: actions/cache/save@v4
+        uses: actions/cache@v3
         if: always()
         with:
           path: .lycheecache
           key: ${{ steps.restore-cache.outputs.cache-primary-key }}
+
