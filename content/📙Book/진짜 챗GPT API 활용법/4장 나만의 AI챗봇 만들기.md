@@ -1,8 +1,4 @@
----
-title: <% tp.file.title %>
-tags:
----
- <% tp.file.title %>
+
 
 #### DALL-E-2 를 이용한 이미지 생성
 ```python fold title:예제

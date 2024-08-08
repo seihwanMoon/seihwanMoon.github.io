@@ -1,8 +1,4 @@
----
-title: <% tp.file.title %>
-tags:
----
- <% tp.file.title %>
+
 
 
 ### 데이터 읽기

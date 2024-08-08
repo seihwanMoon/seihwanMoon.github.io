@@ -1,8 +1,4 @@
----
-title: <% tp.file.title %>
-tags:
----
- <% tp.file.title %>
+
 
 #### 파인튜닝 데이터셋 준비
 - 추가 학습 데이터는 각 줄에 하나의 데이터로 구성하며, 하나의 데이 터는 프롬프트-컴플리션의 쌍(prompt-completion pair)으로 이뤄져 있습니다. 

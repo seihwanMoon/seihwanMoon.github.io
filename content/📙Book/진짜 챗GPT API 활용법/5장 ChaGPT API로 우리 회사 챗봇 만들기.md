@@ -1,8 +1,4 @@
----
-title: <% tp.file.title %>
-tags:
----
- <% tp.file.title %>
+
 
 
 ### chatgpt 이용한 데이터 전처리

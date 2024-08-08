@@ -1,8 +1,4 @@
----
-title: <% tp.file.title %>
-tags:
----
- <% tp.file.title %>
+
 
 #### 환경설정
 ```python fold title:환경설정
