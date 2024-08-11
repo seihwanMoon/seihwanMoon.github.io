@@ -7,12 +7,6 @@ LCEL로 간단한 LLM 애플리케이션 구축
 - [LangSmith](https://python.langchain.com/v0.2/docs/concepts/#langsmith)를 사용하여 응용 프로그램 디버깅 및 추적
 - [LangServe](https://python.langchain.com/v0.2/docs/concepts/#langserve)를 사용하여 애플리케이션 배포
 
-### 설정
-```
-pip install langchain
-```
-자세한 내용은 [설치 가이드](https://python.langchain.com/v0.2/docs/how_to/installation/)를 참조하십시오.
-
 ### 랭스미스 LangSmith
 
 LangChain으로 구축하는 많은 응용 프로그램에는 LLM 호출이 여러 번 호출되는 여러 단계가 포함됩니다. 이러한 애플리케이션이 점점 더 복잡해짐에 따라 체인 또는 에이전트 내부에서 정확히 무슨 일이 일어나고 있는지 검사할 수 있는 것이 중요합니다. 이것을 하는 가장 좋은 방법은 [LangSmith](https://smith.langchain.com/)와 함께 하는 것입니다.
@@ -31,7 +25,7 @@ os.environ["LANGCHAIN_TRACING_V2"] = "true"
 os.environ["LANGCHAIN_API_KEY"] = getpass.getpass()
 ```
 
-### 언어 모델 사용
+### 다양한 언어 모델 사용
 - OpenAI
 - Anthropic
 - Azure
