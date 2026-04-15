@@ -1,5 +1,5 @@
 param(
-    [string]$VaultPath = 'G:\My Drive\Bobsidian\party',
+    [string]$VaultPath = 'G:\My Drive\Bobsidian\github.vault',
     [string]$ExportPath = 'G:\My Drive\Bobsidian\seihwanMoon.github.io'
 )
 
@@ -29,17 +29,17 @@ $pageSpecs = @(
     @{
         Source = 'index.md'
         Output = 'index.html'
-        Title = 'Party Wiki 인덱스'
+        Title = 'github.vault Wiki 인덱스'
     },
     @{
         Source = 'AGENTS.md'
         Output = 'agents.html'
-        Title = 'Party LLM Wiki 운영 규칙'
+        Title = 'github.vault LLM Wiki 운영 규칙'
     },
     @{
         Source = 'log.md'
         Output = 'log.html'
-        Title = 'Party Wiki 로그'
+        Title = 'github.vault Wiki 로그'
     }
 )
 
