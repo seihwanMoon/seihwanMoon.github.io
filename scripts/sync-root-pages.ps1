@@ -6,30 +6,63 @@ param(
 Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
 
-$templatePath = Join-Path $ExportPath 'wiki\home.html'
+$generatorPath = Join-Path $PSScriptRoot 'publish-vault-site.mjs'
+if (-not (Test-Path -LiteralPath $generatorPath)) {
+    throw "Generator script not found: $generatorPath"
+}
+
+& node $generatorPath --vault-path $VaultPath --export-path $ExportPath
+if ($LASTEXITCODE -ne 0) {
+    throw "Site generation failed with exit code $LASTEXITCODE"
+}
+
+return
+
+$templateCandidates = @(
+    (Join-Path $ExportPath 'home.html'),
+    (Join-Path $ExportPath 'wiki\home.html')
+)
+$templatePath = $templateCandidates | Where-Object { Test-Path -LiteralPath $_ } | Select-Object -First 1
 $fileTreePath = Join-Path $ExportPath 'site-lib\html\file-tree-content.html'
 
 if (-not (Test-Path -LiteralPath $templatePath)) {
-    throw "Template page not found: $templatePath"
+    throw "Template page not found. Checked: $($templateCandidates -join ', ')"
 }
 
 $template = Get-Content -LiteralPath $templatePath -Raw
 
 $linkMap = @{
-    'index' = 'index.html'
-    'log' = 'log.html'
-    'AGENTS' = 'agents.html'
-    'Home' = 'wiki/home.html'
-    '사용 방법' = 'wiki/사용-방법.html'
-    'LLM-Maintained Wiki Pattern' = 'wiki/llm-maintained-wiki-pattern.html'
-    'Source - Karpathy - LLM Wiki' = 'wiki/source-karpathy-llm-wiki.html'
+    'index'                                            = 'index.html'
+    'log'                                              = 'log.html'
+    'AGENTS'                                           = 'agents.html'
+    'Home'                                             = 'index.html'
+    'Topics'                                           = 'topics.html'
+    'Updates'                                          = 'updates.html'
+    'Now'                                              = 'now.html'
+    'About'                                            = 'about.html'
+    'Garden-Structure'                                 = 'garden-structure.html'
+    '사용 방법'                                        = 'topics/notes-and-methods/사용-방법.html'
+    'LLM-Maintained Wiki Pattern'                      = 'topics/notes-and-methods/llm-maintained-wiki-pattern.html'
+    'Source - Karpathy - LLM Wiki'                     = 'topics/notes-and-methods/source-karpathy-llm-wiki.html'
+    'updates/2026-04-15-public-garden-restructure'     = 'updates/2026-04-15-public-garden-restructure.html'
+    'topics/llm-platforms/index'                       = 'topics/llm-platforms/index.html'
+    'topics/ai-agents/index'                           = 'topics/ai-agents/index.html'
+    'topics/coding-systems/index'                      = 'topics/coding-systems/index.html'
+    'topics/automation/index'                          = 'topics/automation/index.html'
+    'topics/ml-dl/index'                               = 'topics/ml-dl/index.html'
+    'topics/industrial-automation/index'               = 'topics/industrial-automation/index.html'
+    'topics/notes-and-methods/index'                   = 'topics/notes-and-methods/index.html'
+    'topics/llm-platforms/codex/index'                 = 'topics/llm-platforms/codex/index.html'
+    'topics/llm-platforms/claude/index'                = 'topics/llm-platforms/claude/index.html'
+    'topics/llm-platforms/openclaw/index'              = 'topics/llm-platforms/openclaw/index.html'
+    'topics/llm-platforms/comparisons/index'           = 'topics/llm-platforms/comparisons/index.html'
 }
 
 $pageSpecs = @(
     @{
-        Source = 'index.md'
+        Source = 'Home.md'
         Output = 'index.html'
-        Title = 'github.vault Wiki 인덱스'
+        Title = 'Home'
     },
     @{
         Source = 'AGENTS.md'
