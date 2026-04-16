@@ -1,0 +1,133 @@
+<style>
+  #file-explorer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #file-explorer > .feature-header {
+    order: 0;
+  }
+
+  #file-explorer > .tree-item {
+    order: 50;
+  }
+
+  #file-explorer .tree-item:has(> .tree-item-self[data-path="media"]),
+  #file-explorer .tree-item:has(> .tree-item-self[data-path="raw"]),
+  #file-explorer .tree-item:has(> .tree-item-self[data-path="AGENTS.md"]),
+  #file-explorer .tree-item:has(> .tree-item-self[data-path="Garden-Structure.md"]),
+  #file-explorer .tree-item:has(> .tree-item-self[data-path="index.md"]),
+  #file-explorer .tree-item:has(> .tree-item-self[data-path="log.md"]),
+  #file-explorer .tree-item:has(> .tree-item-self[data-path="무제.canvas"]),
+  #file-explorer .tree-item:has(> .tree-item-self[data-path="Topics.md"]),
+  #file-explorer .tree-item:has(> .tree-item-self[data-path="Updates.md"]) {
+    display: none;
+  }
+
+  #file-explorer > .tree-item:has(> .tree-item-self[data-path="Home.md"]) {
+    order: 1;
+  }
+
+  #file-explorer > .tree-item:has(> .tree-item-self[data-path="Now.md"]) {
+    order: 2;
+  }
+
+  #file-explorer > .tree-item:has(> .tree-item-self[data-path="About.md"]) {
+    order: 3;
+  }
+
+  #file-explorer > .tree-item:has(> .tree-item-self[data-path="topics"]) {
+    order: 4;
+  }
+
+  #file-explorer > .tree-item:has(> .tree-item-self[data-path="updates"]) {
+    order: 5;
+  }
+
+  #file-explorer .tree-item-self[data-path="topics"] .nav-folder-title-content,
+  #file-explorer .tree-item-self[data-path="updates"] .nav-folder-title-content,
+  #file-explorer .tree-item-self[data-path="topics/ai-agents"] .nav-folder-title-content,
+  #file-explorer .tree-item-self[data-path="topics/automation"] .nav-folder-title-content,
+  #file-explorer .tree-item-self[data-path="topics/coding-systems"] .nav-folder-title-content,
+  #file-explorer .tree-item-self[data-path="topics/industrial-automation"] .nav-folder-title-content,
+  #file-explorer .tree-item-self[data-path="topics/llm-platforms"] .nav-folder-title-content,
+  #file-explorer .tree-item-self[data-path="topics/ml-dl"] .nav-folder-title-content,
+  #file-explorer .tree-item-self[data-path="topics/notes-and-methods"] .nav-folder-title-content,
+  #file-explorer .tree-item-self[data-path="topics/llm-platforms/claude"] .nav-folder-title-content,
+  #file-explorer .tree-item-self[data-path="topics/llm-platforms/codex"] .nav-folder-title-content,
+  #file-explorer .tree-item-self[data-path="topics/llm-platforms/comparisons"] .nav-folder-title-content,
+  #file-explorer .tree-item-self[data-path="topics/llm-platforms/openclaw"] .nav-folder-title-content,
+  #file-explorer .tree-item-self[data-path^="topics/"][data-path$="/index.md"] .nav-file-title-content {
+    font-size: 0;
+  }
+
+  #file-explorer .tree-item-self[data-path="topics"] .nav-folder-title-content::after {
+    content: "Topics";
+    font-size: 1em;
+  }
+
+  #file-explorer .tree-item-self[data-path="updates"] .nav-folder-title-content::after {
+    content: "Updates";
+    font-size: 1em;
+  }
+
+  #file-explorer .tree-item-self[data-path="topics/ai-agents"] .nav-folder-title-content::after {
+    content: "AI Agents";
+    font-size: 1em;
+  }
+
+  #file-explorer .tree-item-self[data-path="topics/automation"] .nav-folder-title-content::after {
+    content: "Automation";
+    font-size: 1em;
+  }
+
+  #file-explorer .tree-item-self[data-path="topics/coding-systems"] .nav-folder-title-content::after {
+    content: "Coding Systems";
+    font-size: 1em;
+  }
+
+  #file-explorer .tree-item-self[data-path="topics/industrial-automation"] .nav-folder-title-content::after {
+    content: "Industrial Automation";
+    font-size: 1em;
+  }
+
+  #file-explorer .tree-item-self[data-path="topics/llm-platforms"] .nav-folder-title-content::after {
+    content: "LLM Platforms";
+    font-size: 1em;
+  }
+
+  #file-explorer .tree-item-self[data-path="topics/ml-dl"] .nav-folder-title-content::after {
+    content: "ML / DL";
+    font-size: 1em;
+  }
+
+  #file-explorer .tree-item-self[data-path="topics/notes-and-methods"] .nav-folder-title-content::after {
+    content: "Notes and Methods";
+    font-size: 1em;
+  }
+
+  #file-explorer .tree-item-self[data-path="topics/llm-platforms/claude"] .nav-folder-title-content::after {
+    content: "Claude";
+    font-size: 1em;
+  }
+
+  #file-explorer .tree-item-self[data-path="topics/llm-platforms/codex"] .nav-folder-title-content::after {
+    content: "Codex";
+    font-size: 1em;
+  }
+
+  #file-explorer .tree-item-self[data-path="topics/llm-platforms/comparisons"] .nav-folder-title-content::after {
+    content: "Comparisons";
+    font-size: 1em;
+  }
+
+  #file-explorer .tree-item-self[data-path="topics/llm-platforms/openclaw"] .nav-folder-title-content::after {
+    content: "OpenClaw";
+    font-size: 1em;
+  }
+
+  #file-explorer .tree-item-self[data-path^="topics/"][data-path$="/index.md"] .nav-file-title-content::after {
+    content: "Overview";
+    font-size: 1em;
+  }
+</style>
