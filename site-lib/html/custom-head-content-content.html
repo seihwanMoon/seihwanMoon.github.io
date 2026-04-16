@@ -130,4 +130,10 @@
     content: "Overview";
     font-size: 1em;
   }
+
+  /* Hidden source labels use font-size: 0, so pseudo labels need an absolute size. */
+  #file-explorer .nav-folder-title-content::after,
+  #file-explorer .nav-file-title-content::after {
+    font-size: 14px;
+  }
 </style>
